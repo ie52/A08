@@ -2,168 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Bluetooth 5.0 Transmitter Product Homepage</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html {
+    :root {
+      --main-color: #8B2942;
+      --container-width: 1400px;
+    }
+    html, body {
       font-size: 16px;
+      width: 100%;
+      min-width: 100%;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
     }
     body {
       font-family: system-ui, -apple-system, sans-serif;
       background: linear-gradient(to bottom, #fff5f5, #ffe4e4);
       min-height: 100vh;
-      width: 100%;
-      min-width: 320px;
-      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
     }
     header {
-      background: #8B2942;
+      background: var(--main-color);
       color: white;
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem;
       width: 100%;
     }
     .container {
       width: 100%;
-      max-width: 1200px;
+      max-width: var(--container-width);
       margin: 0 auto;
-      padding: 1.5rem;
+      padding: 2rem;
+      flex: 1;
     }
     .product-section {
       display: flex;
-      gap: 2rem;
+      gap: 3rem;
       background: white;
-      padding: 2rem;
+      padding: 3rem;
       border-radius: 0.5rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      width: 100%;
+      margin-bottom: 3rem;
     }
     .product-image {
       flex: 1;
-      max-width: 500px;
+      max-width: 600px;
     }
     .product-image img {
       width: 100%;
       height: auto;
       border-radius: 0.5rem;
-      border: 6px solid rgba(139, 41, 66, 0.1);
+      border: 8px solid rgba(139, 41, 66, 0.1);
     }
     .product-info {
       flex: 1;
-      max-width: 500px;
+      max-width: 600px;
     }
     .product-info p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
     }
     .product-info ul {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
     .product-info li {
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
     .content-layout {
       display: flex;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      gap: 2rem;
+      margin-bottom: 3rem;
     }
     .specs-section {
-      flex: 3;
+      flex: 2;
     }
     .specs-content {
       background: white;
-      padding: 1.5rem;
+      padding: 2rem;
       border-radius: 0.5rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .specs-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 0.75rem;
+      gap: 1rem;
       margin: 1.5rem 0;
     }
     .spec-item {
       display: flex;
       justify-content: space-between;
-      padding: 0.75rem 0;
+      padding: 1rem 0;
       border-bottom: 1px solid rgba(139, 41, 66, 0.1);
+      font-size: 1.1rem;
     }
     .spec-label {
       font-weight: 600;
-      color: #8B2942;
+      color: var(--main-color);
     }
     .models-section {
-      flex: 2;
-      min-width: 250px;
+      flex: 1;
+      min-width: 300px;
     }
     .models-content {
       background: white;
-      padding: 1.5rem;
+      padding: 2rem;
       border-radius: 0.5rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       position: sticky;
-      top: 1.5rem;
+      top: 2rem;
     }
     .models-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 0.75rem;
+      gap: 1rem;
     }
     .model-card {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem;
+      padding: 1.25rem;
       border-bottom: 1px solid rgba(139, 41, 66, 0.1);
     }
     .model-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #333;
     }
     .price {
-      color: #8B2942;
-      font-size: 1.3rem;
+      color: var(--main-color);
+      font-size: 1.5rem;
       font-weight: bold;
     }
     footer {
-      background: #8B2942;
+      background: var(--main-color);
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 1.5rem;
       width: 100%;
+      margin-top: auto;
     }
     h1 { 
-      font-size: 2.2rem;
-      max-width: 1200px;
+      font-size: 3rem;
       margin: 0 auto;
+      max-width: var(--container-width);
     }
     h2 { 
-      color: #8B2942;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #8B2942;
-      padding-bottom: 0.5rem;
+      color: var(--main-color);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--main-color);
+      padding-bottom: 0.75rem;
     }
-    p { line-height: 1.6; color: #4a5568; margin-bottom: 1rem; }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1440px) {
+      :root {
+        --container-width: 1200px;
+      }
       .container {
-        padding: 1.25rem;
+        padding: 2rem;
       }
       .product-section {
+        padding: 2.5rem;
+        gap: 2.5rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      :root {
+        --container-width: 1000px;
+      }
+      .container {
         padding: 1.5rem;
-        gap: 1.5rem;
+      }
+      .product-section {
+        padding: 2rem;
+        gap: 2rem;
       }
     }
 
     @media screen and (max-width: 992px) {
-      html {
-        font-size: 15px;
+      :root {
+        --container-width: 800px;
       }
       .content-layout {
         flex-direction: column;
@@ -174,9 +200,18 @@
       .models-content {
         position: static;
       }
+      h1 {
+        font-size: 2.25rem;
+      }
+      h2 {
+        font-size: 1.75rem;
+      }
     }
 
     @media screen and (max-width: 768px) {
+      :root {
+        --container-width: 100%;
+      }
       .product-section {
         flex-direction: column;
         align-items: center;
@@ -188,24 +223,30 @@
       .container {
         padding: 1rem;
       }
+      .product-info p {
+        font-size: 1.1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
     }
 
     @media screen and (max-width: 480px) {
-      html {
-        font-size: 14px;
-      }
       .container {
         padding: 0.75rem;
       }
       .product-section {
-        padding: 1.25rem;
+        padding: 1.5rem;
       }
       .spec-item {
         flex-direction: column;
-        gap: 0.4rem;
+        gap: 0.5rem;
       }
       h1 {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
+      }
+      .product-info p {
+        font-size: 1rem;
       }
     }
   </style>
