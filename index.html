@@ -6,41 +6,53 @@
   <title>Bluetooth 5.0 Transmitter Product Homepage</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html {
+      font-size: 16px;
+    }
     body {
       font-family: system-ui, -apple-system, sans-serif;
       background: linear-gradient(to bottom, #fff5f5, #ffe4e4);
       min-height: 100vh;
+      width: 100%;
+      min-width: 320px;
+      overflow-x: hidden;
     }
     header {
       background: #8B2942;
       color: white;
       text-align: center;
       padding: 2rem;
+      width: 100%;
     }
     .container {
-      max-width: 1200px;
+      width: 100%;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 2rem;
     }
     .product-section {
       display: flex;
-      gap: 2rem;
+      gap: 4rem;
       background: white;
-      padding: 2rem;
+      padding: 3rem;
       border-radius: 0.5rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+      width: 100%;
     }
     .product-image {
       flex: 1;
+      max-width: 600px;
     }
     .product-image img {
       width: 100%;
+      height: auto;
       border-radius: 0.5rem;
       border: 8px solid rgba(139, 41, 66, 0.1);
     }
     .product-info {
       flex: 1;
+      max-width: 600px;
     }
     .product-info p {
       font-size: 1.25rem;
@@ -57,10 +69,12 @@
     .specs-section {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+      width: 100%;
     }
     .specs-content {
       width: 60%;
+      min-width: 300px;
       background: white;
       padding: 2rem;
       border-radius: 0.5rem;
@@ -75,7 +89,7 @@
     .spec-item {
       display: flex;
       justify-content: space-between;
-      padding: 0.8rem 0;
+      padding: 1rem 0;
       border-bottom: 1px solid rgba(139, 41, 66, 0.1);
     }
     .spec-label {
@@ -85,10 +99,12 @@
     .models-section {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+      width: 100%;
     }
     .models-content {
       width: 60%;
+      min-width: 300px;
       background: white;
       padding: 2rem;
       border-radius: 0.5rem;
@@ -96,15 +112,19 @@
     }
     .models-grid {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
       gap: 1rem;
     }
     .model-card {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem;
+      padding: 1.5rem;
       border-bottom: 1px solid rgba(139, 41, 66, 0.1);
+    }
+    .model-card h3 {
+      font-size: 1.2rem;
+      color: #333;
     }
     .price {
       color: #8B2942;
@@ -116,9 +136,14 @@
       color: white;
       text-align: center;
       padding: 1.5rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
+      width: 100%;
     }
-    h1 { font-size: 2.5rem; }
+    h1 { 
+      font-size: 2.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
     h2 { 
       color: #8B2942;
       font-size: 1.8rem;
@@ -127,14 +152,68 @@
       padding-bottom: 0.5rem;
     }
     p { line-height: 1.6; color: #4a5568; margin-bottom: 1rem; }
-    @media (max-width: 768px) {
-      .product-section { flex-direction: column; }
-      .product-info p { font-size: 1.1rem; }
-      .specs-content, .models-content {
+
+    @media screen and (max-width: 1200px) {
+      .container {
+        padding: 1.5rem;
+      }
+      .product-section {
+        padding: 2rem;
+        gap: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      html {
+        font-size: 15px;
+      }
+      .specs-content,
+      .models-content {
+        width: 70%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .product-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .product-image,
+      .product-info {
+        max-width: 100%;
+      }
+      .product-info p {
+        font-size: 1.1rem;
+      }
+      .specs-content,
+      .models-content {
         width: 100%;
       }
-      .specs-section, .models-section {
+      .specs-section,
+      .models-section {
         justify-content: center;
+      }
+      .container {
+        padding: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      html {
+        font-size: 14px;
+      }
+      .container {
+        padding: 0.8rem;
+      }
+      .product-section {
+        padding: 1.5rem;
+      }
+      .spec-item {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -215,7 +294,7 @@
   </div>
 
   <footer>
-    ©4/8/2025 Isaac Etokhana. All rights reserved.
+    © 4/8/2025 Isaac Etokhana. All rights reserved.
   </footer>
 </body>
 </html>
