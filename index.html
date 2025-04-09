@@ -21,75 +21,75 @@
       background: #8B2942;
       color: white;
       text-align: center;
-      padding: 2rem;
+      padding: 1.5rem;
       width: 100%;
     }
     .container {
       width: 100%;
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 2rem;
+      padding: 1.5rem;
     }
     .product-section {
       display: flex;
-      gap: 4rem;
+      gap: 2rem;
       background: white;
-      padding: 3rem;
+      padding: 2rem;
       border-radius: 0.5rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       width: 100%;
     }
     .product-image {
       flex: 1;
-      max-width: 600px;
+      max-width: 500px;
     }
     .product-image img {
       width: 100%;
       height: auto;
       border-radius: 0.5rem;
-      border: 8px solid rgba(139, 41, 66, 0.1);
+      border: 6px solid rgba(139, 41, 66, 0.1);
     }
     .product-info {
       flex: 1;
-      max-width: 600px;
+      max-width: 500px;
     }
     .product-info p {
-      font-size: 1.25rem;
-      line-height: 1.8;
-      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
     }
     .product-info ul {
-      font-size: 1.1rem;
-      line-height: 1.8;
+      font-size: 1rem;
+      line-height: 1.6;
     }
     .product-info li {
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .content-layout {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
     }
     .specs-section {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 3rem;
-      width: 100%;
+      flex: 3;
     }
     .specs-content {
-      width: 60%;
-      min-width: 300px;
       background: white;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 0.5rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .specs-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1rem;
-      margin: 2rem 0;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
     }
     .spec-item {
       display: flex;
       justify-content: space-between;
-      padding: 1rem 0;
+      padding: 0.75rem 0;
       border-bottom: 1px solid rgba(139, 41, 66, 0.1);
     }
     .spec-label {
@@ -97,57 +97,55 @@
       color: #8B2942;
     }
     .models-section {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 3rem;
-      width: 100%;
+      flex: 2;
+      min-width: 250px;
     }
     .models-content {
-      width: 60%;
-      min-width: 300px;
       background: white;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 0.5rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 1.5rem;
     }
     .models-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 0.75rem;
     }
     .model-card {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem;
+      padding: 1rem;
       border-bottom: 1px solid rgba(139, 41, 66, 0.1);
     }
     .model-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #333;
     }
     .price {
       color: #8B2942;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: bold;
     }
     footer {
       background: #8B2942;
       color: white;
       text-align: center;
-      padding: 1.5rem;
-      margin-top: 3rem;
+      padding: 1rem;
+      margin-top: 2rem;
       width: 100%;
     }
     h1 { 
-      font-size: 2.5rem;
-      max-width: 1400px;
+      font-size: 2.2rem;
+      max-width: 1200px;
       margin: 0 auto;
     }
     h2 { 
       color: #8B2942;
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
       border-bottom: 2px solid #8B2942;
       padding-bottom: 0.5rem;
     }
@@ -155,11 +153,11 @@
 
     @media screen and (max-width: 1200px) {
       .container {
-        padding: 1.5rem;
+        padding: 1.25rem;
       }
       .product-section {
-        padding: 2rem;
-        gap: 2rem;
+        padding: 1.5rem;
+        gap: 1.5rem;
       }
     }
 
@@ -167,9 +165,14 @@
       html {
         font-size: 15px;
       }
-      .specs-content,
+      .content-layout {
+        flex-direction: column;
+      }
+      .models-section {
+        width: 100%;
+      }
       .models-content {
-        width: 70%;
+        position: static;
       }
     }
 
@@ -182,17 +185,6 @@
       .product-info {
         max-width: 100%;
       }
-      .product-info p {
-        font-size: 1.1rem;
-      }
-      .specs-content,
-      .models-content {
-        width: 100%;
-      }
-      .specs-section,
-      .models-section {
-        justify-content: center;
-      }
       .container {
         padding: 1rem;
       }
@@ -203,17 +195,17 @@
         font-size: 14px;
       }
       .container {
-        padding: 0.8rem;
+        padding: 0.75rem;
       }
       .product-section {
-        padding: 1.5rem;
+        padding: 1.25rem;
       }
       .spec-item {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.4rem;
       }
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -240,61 +232,63 @@
       </div>
     </section>
 
-    <section class="specs-section">
-      <div class="specs-content">
-        <h2>Technical Specifications</h2>
-        <div class="specs-grid">
-          <div class="spec-item">
-            <span class="spec-label">Bluetooth Version:</span>
-            <span>5.0 with EDR</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Battery Life:</span>
-            <span>30+ hours playback</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Audio Codecs:</span>
-            <span>SBC, aptX, aptX LL</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Range:</span>
-            <span>Up to 100 feet</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Audio Input:</span>
-            <span>3.5mm AUX, Optical</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Dimensions:</span>
-            <span>2.4" x 2.4" x 0.6"</span>
+    <div class="content-layout">
+      <section class="specs-section">
+        <div class="specs-content">
+          <h2>Technical Specifications</h2>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Bluetooth Version:</span>
+              <span>5.0 with EDR</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Battery Life:</span>
+              <span>30+ hours playback</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Audio Codecs:</span>
+              <span>SBC, aptX, aptX LL</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Range:</span>
+              <span>Up to 100 feet</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Audio Input:</span>
+              <span>3.5mm AUX, Optical</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Dimensions:</span>
+              <span>2.4" x 2.4" x 0.6"</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="models-section">
-      <div class="models-content">
-        <h2>Available Models</h2>
-        <div class="models-grid">
-          <div class="model-card">
-            <h3>Standard Model</h3>
-            <p class="price">$29.99</p>
-          </div>
-          <div class="model-card">
-            <h3>Pro Model with aptX HD</h3>
-            <p class="price">$49.99</p>
-          </div>
-          <div class="model-card">
-            <h3>Premium Package</h3>
-            <p class="price">$69.99</p>
+      <section class="models-section">
+        <div class="models-content">
+          <h2>Available Models</h2>
+          <div class="models-grid">
+            <div class="model-card">
+              <h3>Standard Model</h3>
+              <p class="price">$29.99</p>
+            </div>
+            <div class="model-card">
+              <h3>Pro Model with aptX HD</h3>
+              <p class="price">$49.99</p>
+            </div>
+            <div class="model-card">
+              <h3>Premium Package</h3>
+              <p class="price">$69.99</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 
   <footer>
-    © 4/8/2025 Isaac Etokhana. All rights reserved.
+    © 4/08/2025 Isaac Etokhana. All Rights Reserved.
   </footer>
 </body>
 </html>
